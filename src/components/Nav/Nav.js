@@ -9,11 +9,11 @@ import g from '../..'
 const Header = (props) => {
     return (
         <Navbar id="Navbar" className="navbar_main_container" bg="dark" expand="lg">
-            <Navbar.Brand className="navLinks" href="/">  Apna Bazzar  </Navbar.Brand>
+            <Navbar.Brand className="navLinks" href="/home">  Apna Bazzar  </Navbar.Brand>
             <Navbar.Toggle id="navbar_toggle" aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" style={{marginLeft:"25px"}}>
                 <Nav className="mr-auto">
-                    <Nav.Link className="navLinks" href="/"> Home </Nav.Link>
+                    <Nav.Link className="navLinks" href="/home"> Home </Nav.Link>
                     <Nav.Link className="navLinks" href="/products" > All Products </Nav.Link>
                     <Nav.Link className="navLinks" href="/products/coats"> Coats </Nav.Link>
                     <Nav.Link className="navLinks" href="/products/shirts"> T-Shirts </Nav.Link>
