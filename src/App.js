@@ -71,9 +71,9 @@ function App() {
           <Route path="/products">
             <Product />
           </Route>
-          <Route path="/">  <Login_Page /> </Route>
+          <Route path="/login">  <Login_Page /> </Route>
           <Route path="/create-an-account"> <Create /> </Route>
-          <Route path="/home">
+          <Route path="/">
             <Main />
           </Route>
 
