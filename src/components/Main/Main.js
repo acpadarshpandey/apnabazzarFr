@@ -4,6 +4,7 @@ import Header from "../slideshow/Slideshow";
 import Main_Content from "../Main_Content/Main_Content";
 //Axios
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 
 
 const Main = () => {
@@ -15,14 +16,14 @@ const Main = () => {
         .then(res => {
             console.log(res);
             if(res.data.status === "not verified") {
-                window.location.href="/login";
+               < Redirect to="/login"/>
             }
         })
     }, [])
 
     return (
         <div>
-            <Nav />
+            <Nav  />
             <Header />
             <Main_Content />
         </div>
