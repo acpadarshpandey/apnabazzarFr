@@ -56,7 +56,6 @@ const Login = (props) => {
             case "null":
                 setErrorMessage("");
                 let error_message = document.getElementsByClassName("error_message")[0];
-                error_message.style.display = "none";
                 break;
             case "invalid":
                 setErrorMessage("Your username or password are invalid please try again");
