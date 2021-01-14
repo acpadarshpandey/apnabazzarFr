@@ -37,7 +37,7 @@ const Cart = () => {
 
         console.log(finalPrice);
 
-        axios.post(`/changeFinalPrice/${finalPrice}`)
+        axios.post(`api/changeFinalPrice/${finalPrice}`)
         .then(res => {
             setNewCheckoutPrice(res.data.finalPrice);
             console.log(newCheckoutPrice);
@@ -78,7 +78,7 @@ const Cart = () => {
     
 
     useEffect(() => {    
-        axios.get("/shopping-cart/all-items")
+        axios.get("api/shopping-cart/all-items")
         .then(res => {
             setCartItems(res.data);
             res.data.map((item) => {
@@ -91,7 +91,7 @@ const Cart = () => {
             }
         });
 
-        axios.get("/status")
+        axios.get("api/status")
         .then(res => {
             setUserEmail(res.data.email);
         })
@@ -114,7 +114,7 @@ const Cart = () => {
     
     const handleClick = (id) => {
         let item_id = id;
-        let url = `/shopping-cart/delete-item/${item_id}`;
+        let url = `api/shopping-cart/delete-item/${item_id}`;
         axios.post(url)
         .then(res => {
             if(res.data === "item deleted") {

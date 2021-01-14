@@ -13,7 +13,7 @@ const Shirt = () => {
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     useEffect(() => {
-        axios.get("/products/shirt")
+        axios.get("/api/products/shirt")
         .then(res => {
             console.log(res);
             setShirt(shuffle(res.data));
@@ -23,7 +23,7 @@ const Shirt = () => {
     const handleClick = (id) => {
         let product_id = id;
 
-        let url = `/add-to-cart/${product_id}`;
+        let url = `/api/add-to-cart/${product_id}`;
         
         axios.post(url)
         .then(res => {
@@ -48,7 +48,7 @@ const Shirt = () => {
                                 <Card  
                                     isAddedToCart={isAddedToCart} 
                                     onClick={handleClick.bind(this, item._id)}
-                                    key={index} image={item.image} 
+                                    key={index} image={item.path} 
                                     productName={item.name} 
                                     price={item.price} 
                                 />

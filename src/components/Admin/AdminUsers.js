@@ -7,7 +7,7 @@ const AdminUsers = () => {
 
     const [data, setData] = useState([]);
 
-    fetch("/admin/users/all")
+    fetch("/api/admin/users/all")
     .then(res => res.json())
     .then(data => {
         console.log(data);
@@ -15,7 +15,7 @@ const AdminUsers = () => {
     })
     
     useEffect(() => {
-        axios.get("/status")
+        axios.get("/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href = "/login";
@@ -25,7 +25,7 @@ const AdminUsers = () => {
 
 
     const deleteUser = (id) => {
-        axios.post(`/deleteUser/${id}`)
+        axios.post(`/api/deleteUser/${id}`)
         .then(res => {
             console.log(res);
             if(res) {

@@ -28,7 +28,7 @@ const Coat = () => {
     }
 
     useEffect(() => {
-        axios.get("/products/coat")
+        axios.get("/api/products/coat")
         .then(res => {
             setCoats(Shuffle(res.data));
         })
@@ -38,7 +38,7 @@ const Coat = () => {
     const handleClick = (id) => {
         let product_id = id;
 
-        let url = `/add-to-cart/${product_id}`;
+        let url = `/api/add-to-cart/${product_id}`;
         
         axios.post(url)
         .then(res => {

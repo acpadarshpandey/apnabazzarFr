@@ -23,7 +23,7 @@ const Content = () => {
         }
 
 
-        axios.get("/status")
+        axios.get("/api/status")
         .then((res) => {
             console.log(date);
             console.log(res);
@@ -34,7 +34,7 @@ const Content = () => {
             setUsername(res.data.userName);
         })
 
-        axios.get("/db-count/cart")
+        axios.get("/api/db-count/cart")
         .then(res => {
             setCartLength(res.data.length);
 

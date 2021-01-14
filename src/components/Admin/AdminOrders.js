@@ -7,7 +7,7 @@ import axios from "axios";
 const AdminOrders = () => {
 
     useEffect(() => {
-        axios.get("/status")
+        axios.get("/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href = "login";

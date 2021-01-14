@@ -8,7 +8,7 @@ const AdminProducts = () => {
 
     const [data, setData] = useState([]);
 
-    fetch("/admin/products/show-all")
+    fetch("/api/admin/products/show-all")
     .then(res => res.json())
     .then(data => {
         console.log(data);
@@ -16,7 +16,7 @@ const AdminProducts = () => {
     });
 
     useEffect(() => {
-        axios.get("/status")
+        axios.get("/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href = "login";
@@ -25,7 +25,7 @@ const AdminProducts = () => {
     }, [])
 
     const deleteProduct = (id) => {
-        axios.post(`/deleteProduct/${id}`)
+        axios.post(`/api/deleteProduct/${id}`)
         .then(res => {
             if(res.data) {
                 window.location.reload();

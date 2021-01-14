@@ -4,10 +4,10 @@ import axios from "axios";
 const MainContent = () => {
 
     useEffect(() => {
-        axios.get("/status")
+        axios.get("/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
-                window.location.href = "login";
+                window.location.href = "/login";
             }
         })
     }, [])

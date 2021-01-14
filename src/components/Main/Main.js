@@ -11,7 +11,7 @@ const Main = () => {
 
 
     useEffect(() => {
-        axios.get("/status")
+        axios.get("/api/status")
         .then(res => {
             console.log(res);
             if(res.data.status === "not verified") {

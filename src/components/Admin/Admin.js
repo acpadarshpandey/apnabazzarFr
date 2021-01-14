@@ -8,19 +8,19 @@ const Admin = () => {
     const [usersCount, setUsersCount] = useState();
     const [productCount, setProductCount] = useState();
     useEffect(() => {
-        axios.get("/status")
+        axios.get("/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href="/login";
             }
         })
 
-        axios.get("/dbCount/cart")
+        axios.get("/api/dbCount/cart")
         .then(res => {
             setUsersCount(res.data.length);
         })
 
-        axios.get("/dbCount/products")
+        axios.get("/api/dbCount/products")
         .then(res => {
             setProductCount(res.data.length);
         })

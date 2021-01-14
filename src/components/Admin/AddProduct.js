@@ -5,7 +5,7 @@ import axios from "axios";
 const AddProduct = () => {
 
     useEffect(() => {
-        axios.get("/status")
+        axios.get("/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href = "login";
@@ -18,7 +18,7 @@ const AddProduct = () => {
             <div className="add_product_form_container" >
                 <h1 className="add_product_title" style={{margin:"5rem"}}> Add Product </h1>
               <div className="products_form">
-                <form method="POST" action="/admin/add-product" enctype="multipart/form-data" >
+                <form method="POST" action="/api/admin/add-product" enctype="multipart/form-data" >
                         <div className="form_group">
                             <input className="add_products_input" type="text" name="product_name" placeholder="Product Name" />
                         </div>
