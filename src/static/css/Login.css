@@ -1,0 +1,163 @@
+
+.login_main_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 95, 95);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+.login_container {
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login_title_container {
+    width: 100%;
+    height: 20%;
+}
+
+.login_title_container h1 {
+    font-size: 60px;
+    text-align: center;
+}
+.login_form_container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form_group {
+    margin: 10px;
+}
+.submit_form_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit_button {
+    padding: 10px;
+    outline: none;
+    background: none;
+    color: white;
+    width: 25vw;
+    height: 10vh;
+    border-radius: 2rem;
+}
+.input{
+    height: 8vh;
+    width: 25vw;
+    border-radius: 1.5rem;
+    padding: 20px;
+    text-align: center;
+    outline: none;
+    color:black;
+}
+
+
+
+
+
+.create_account_link {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.form_back_button {
+    margin-left: 5px;
+}
+
+/*MOBILE VERSION*/
+
+@media (min-width: 1281px) {
+  
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+        
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .input {
+        width: 200px;
+        padding: 10px;
+    }
+    .login_title_container h1 {
+        font-size: 40px;
+    }
+    .submit_button {
+        padding: 5px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .input {
+        width: 200px;
+        padding: 10px;
+    }
+    .login_title_container h1 {
+        font-size: 40px;
+    }
+    .submit_button {
+        padding: 5px;
+    }
+    .create_account_link {
+        font-size: 12px;
+    }
+  }
+  .newad{
+    margin: auto;
+
+}
