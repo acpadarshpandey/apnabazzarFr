@@ -11,7 +11,7 @@ const Main = () => {
 
 
     useEffect(() => {
-        axios.get("/api/status")
+        axios.get("http://apnabazzar.herokuapp.com/api/status")
         .then(res => {
             console.log(res);
             if(res.data.status === "not verified") {

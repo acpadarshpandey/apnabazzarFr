@@ -16,7 +16,7 @@ const AdminProducts = () => {
     });
 
     useEffect(() => {
-        axios.get("/api/status")
+        axios.get("http://apnabazzar.herokuapp.com/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href = "login";
@@ -25,7 +25,7 @@ const AdminProducts = () => {
     }, [])
 
     const deleteProduct = (id) => {
-        axios.post(`/api/deleteProduct/${id}`)
+        axios.post(`http://apnabazzar.herokuapp.com/api/deleteProduct/${id}`)
         .then(res => {
             if(res.data) {
                 window.location.reload();

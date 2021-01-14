@@ -27,7 +27,7 @@ const Display = (props) => {
     useEffect(() => {
 
 
-        axios.get("/api/status")
+        axios.get("http://apnabazzar.herokuapp.com/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href="/login";
@@ -36,9 +36,10 @@ const Display = (props) => {
         })
 
 
-        axios.get("/api/admin/products/show-all")
+        axios.get("http://apnabazzar.herokuapp.com/api/admin/products/show-all")
         .then(res => {
             setProduct(shuffle(res.data));
+            console.log(res.data)
 
         })
     }, [])
@@ -46,7 +47,7 @@ const Display = (props) => {
     const handleClick = (id) => {
         let product_id = id;
 
-        let url = `/api/add-to-cart/${product_id}`;
+        let url = `http://apnabazzar.herokuapp.com/api/add-to-cart/${product_id}`;
         
         axios.post(url)
         .then(res => {

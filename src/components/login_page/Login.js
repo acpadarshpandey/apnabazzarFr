@@ -41,7 +41,7 @@ const Login = (props) => {
     const [errorMessage, setErrorMessage] = useState();
 
     try {
-       fetch("/api/redirect")
+       fetch("http://apnabazzar.herokuapp.com/api/redirect")
        .then(res => res.json())
        .then(data => {
         console.log(data);
@@ -95,7 +95,7 @@ const Login = (props) => {
 
                 <div className="login_form_container">
 
-                    <form  action="/api/login" method="POST">
+                    <form  action="http://apnabazzar.herokuapp.com/api/login" method="POST">
                         <div className="form_group">
                             <input className="input" name="username" placeholder="Enter you username" />  
                         </div>

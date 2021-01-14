@@ -13,7 +13,7 @@ const Shirt = () => {
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     useEffect(() => {
-        axios.get("/api/products/shirt")
+        axios.get("http://apnabazzar.herokuapp.com/api/products/shirt")
         .then(res => {
             console.log(res);
             setShirt(shuffle(res.data));
@@ -23,7 +23,7 @@ const Shirt = () => {
     const handleClick = (id) => {
         let product_id = id;
 
-        let url = `/api/add-to-cart/${product_id}`;
+        let url = `http://apnabazzar.herokuapp.com/api/add-to-cart/${product_id}`;
         
         axios.post(url)
         .then(res => {

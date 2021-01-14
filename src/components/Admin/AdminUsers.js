@@ -15,7 +15,7 @@ const AdminUsers = () => {
     })
     
     useEffect(() => {
-        axios.get("/api/status")
+        axios.get("http://apnabazzar.herokuapp.com/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href = "/login";
@@ -25,7 +25,7 @@ const AdminUsers = () => {
 
 
     const deleteUser = (id) => {
-        axios.post(`/api/deleteUser/${id}`)
+        axios.post(`http://apnabazzar.herokuapp.com/api/deleteUser/${id}`)
         .then(res => {
             console.log(res);
             if(res) {

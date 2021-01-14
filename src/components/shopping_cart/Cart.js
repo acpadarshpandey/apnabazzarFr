@@ -37,7 +37,7 @@ const Cart = () => {
 
         console.log(finalPrice);
 
-        axios.post(`api/changeFinalPrice/${finalPrice}`)
+        axios.post(`http://apnabazzar.herokuapp.com/api/changeFinalPrice/${finalPrice}`)
         .then(res => {
             setNewCheckoutPrice(res.data.finalPrice);
             console.log(newCheckoutPrice);
@@ -78,7 +78,7 @@ const Cart = () => {
     
 
     useEffect(() => {    
-        axios.get("api/shopping-cart/all-items")
+        axios.get("http://apnabazzar.herokuapp.com/api/shopping-cart/all-items")
         .then(res => {
             setCartItems(res.data);
             res.data.map((item) => {
@@ -91,7 +91,7 @@ const Cart = () => {
             }
         });
 
-        axios.get("api/status")
+        axios.get("http://apnabazzar.herokuapp.com/api/status")
         .then(res => {
             setUserEmail(res.data.email);
         })
@@ -114,7 +114,7 @@ const Cart = () => {
     
     const handleClick = (id) => {
         let item_id = id;
-        let url = `api/shopping-cart/delete-item/${item_id}`;
+        let url = `http://apnabazzar.herokuapp.com/api/shopping-cart/delete-item/${item_id}`;
         axios.post(url)
         .then(res => {
             if(res.data === "item deleted") {
@@ -152,7 +152,7 @@ const Cart = () => {
 
    const handleModalClose = () => {
     setShowModal(false);
-    axios.post("/eraseCart")
+    axios.post("http://apnabazzar.herokuapp.com/api/eraseCart")
     .then(res => {
         console.log(res);
     })

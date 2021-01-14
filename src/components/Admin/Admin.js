@@ -8,19 +8,19 @@ const Admin = () => {
     const [usersCount, setUsersCount] = useState();
     const [productCount, setProductCount] = useState();
     useEffect(() => {
-        axios.get("/api/status")
+        axios.get("http://apnabazzar.herokuapp.com/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href="/login";
             }
         })
 
-        axios.get("/api/dbCount/cart")
+        axios.get("http://apnabazzar.herokuapp.com/api/dbCount/cart")
         .then(res => {
             setUsersCount(res.data.length);
         })
 
-        axios.get("/api/dbCount/products")
+        axios.get("http://apnabazzar.herokuapp.com/api/dbCount/products")
         .then(res => {
             setProductCount(res.data.length);
         })

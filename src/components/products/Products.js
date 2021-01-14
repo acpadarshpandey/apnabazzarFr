@@ -36,9 +36,9 @@ const Products = () => {
 
 
     const callFunc = () => {
-        axios.post(`/products/${userChoice}`)
+        axios.post(`http://apnabazzar.herokuapp.com/api/products/${userChoice}`)
         .then(firstRes => {
-            axios.post(`/products/${userChoice}`)
+            axios.post(`http://apnabazzar.herokuapp.com/api/products/${userChoice}`)
             .then(res => {
                 res.data.map((item) => {
                     array.push(item);

@@ -16,7 +16,7 @@ const Create_An_Account = (props) => {
 
             <div className="login_form_container">
 
-                <form action="/api/create-an-account" method="POST">
+                <form action="http://apnabazzar.herokuapp.com/api/create-an-account" method="POST">
                     <div className="form_group">
                         <input className="input user_input" autoFocus required name="username" placeholder="Please select a username" />  
                     </div>

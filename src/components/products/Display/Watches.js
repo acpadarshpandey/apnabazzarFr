@@ -14,7 +14,7 @@ const Watch = () => {
     const [isAddedToCart, setIsAddedToCart] = useState(false);
     
     useEffect(() => {
-        axios.get("/api/product/watch")
+        axios.get("http://apnabazzar.herokuapp.com/api/product/watch")
         .then(res => {
            setWatch(res.data);
         })
@@ -23,7 +23,7 @@ const Watch = () => {
     const handleClick = (id) => {
         let product_id = id;
 
-        let url = `/api/add-to-cart/${product_id}`;
+        let url = `http://apnabazzar.herokuapp.com/api/add-to-cart/${product_id}`;
         
         axios.post(url)
         .then(res => {

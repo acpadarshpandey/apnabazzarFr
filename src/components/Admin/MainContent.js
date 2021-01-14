@@ -4,7 +4,7 @@ import axios from "axios";
 const MainContent = () => {
 
     useEffect(() => {
-        axios.get("/api/status")
+        axios.get("http://apnabazzar.herokuapp.com/api/status")
         .then(res => {
             if(res.data.status === "not verified") {
                 window.location.href = "/login";
