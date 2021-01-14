@@ -25,8 +25,8 @@ const Header = (props) => {
                     <Nav.Link className="navLinks" href="/products/watches"> Watches </Nav.Link>
                     <Nav.Link className="navLinks" href="/shopping-cart" > My Cart </Nav.Link>
                     <Nav.Link className="navLinks" style={{marginLeft:"8rem"}} href="/login" ><button 
-style={{ width:"8vw",borderRadius: "1rem",outline:"none"}}
-                     onClick={handleclick}>{(!isclick)?"Login":"Logout"}</button> </Nav.Link>
+style={{ width:"10vw",borderRadius: "1rem",outline:"none"}}
+                     onClick={handleclick}>{(!isclick)?"Enjoy Shoping!!":"Logout"}</button> </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
